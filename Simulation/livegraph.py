@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed May 25 21:32:37 2016
-
-@author: martin
-"""
+#"""
+#Created on Wed May 25 21:32:37 2016
+#
+#@author: martin
+#"""
 
 import numpy as np
 from numpy import sin, cos, pi
@@ -32,13 +32,13 @@ def f(x, t):
     dxdt = [alphap, betap, (D*E-B*F)*det, (-C*E + A*F)*det]
     return dxdt
 
-c_ini = [pi/2, pi/2, 0., 0.]
-t = np.linspace(0., 5., 200)
+c_ini = [pi/2, pi/2, 2., 0.]
+t = np.linspace(0., 10., 200)
 
 sol = odeint(f, c_ini, t)
 
 fig = plt.figure()
-ax1 = fig.add_subplot(1,1,1)
+ax1 = fig.add_subplot(1,1,1) 
 ax1.set_aspect('equal')
 ax1.set_xlim(-2,2)
 ax1.set_ylim(-2,2)
@@ -49,10 +49,14 @@ def animate(i):
     ybs = lb*cos(sol[i,1]) + yas
     thisx = [0, xas, xbs]
     thisy = [0, yas, ybs]
+    theta = np.linspace(0, 2*pi, 361)
+    xcs = la*sin(theta)
+    ycs = la*cos(theta)
     ax1.clear()
     ax1.set_xlim(-2,2)
     ax1.set_ylim(-2,2)
     ax1.plot(thisx,thisy, 'bo-')
+    ax1.plot(xcs, ycs, 'g-')
 #a = sol[:,0] ; b = sol[:,1]
 #print (sol)
 #xa = la*sin(a); ya = la*cos(a) #-
@@ -66,6 +70,6 @@ def animate(i):
 #plt.plot(xc, yc, 'c-')
 #for i in range(0,len(xa)):
 #	plt.plot([xa[i], xb[i]],[ya[i], yb[i]], 'b-')
-ani = animation.FuncAnimation(fig,animate,np.arange(1,len(sol)),interval=10)
-ani.save('sim1.mp4')
+ani = animation.FuncAnimation(fig,animate,np.arange(1,len(sol)),interval=50)
+ani.save('sim2.mp4')
 plt.show()
