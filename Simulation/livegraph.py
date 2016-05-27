@@ -10,7 +10,6 @@ from numpy import sin, cos, pi
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-from matplotlib.animation import ArtistAnimation
 
 la = 1.0
 lb = 1.0
