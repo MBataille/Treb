@@ -1,9 +1,10 @@
-# -*- coding: utf-8 -*-
-#"""
-#Created on Wed May 25 21:32:37 2016
-#
-#@author: martin
-#"""
+"""
+Created on Wed May 25 21:32:37 2016
+
+@author: martin
+
+Simulacion del disco
+"""
 
 import numpy as np
 from numpy import sin, cos, pi
@@ -24,16 +25,16 @@ def f(x, t):
     B = la*lb*cos(alpha-beta)
     C = la*lb*cos(alpha-beta)
     D = lb*lb
-    E = g*la*sin(alpha)-la*lb*betap*betap*sin(alpha-beta) 
-    F = la*lb*alphap*alphap*sin(alpha-beta)+g*lb*sin(beta) 
+    E = -g*la*sin(alpha)-la*lb*betap*betap*sin(alpha-beta) 
+    F = la*lb*alphap*alphap*sin(alpha-beta)-g*lb*sin(beta) 
     det = (I/m + la*la*sin(alpha-beta)*sin(alpha-beta))*lb*lb
     det = 1.0/det
 
     dxdt = [alphap, betap, (D*E-B*F)*det, (-C*E + A*F)*det]
     return dxdt
 
-c_ini = [pi/2, pi/2, 2., 0.]
-t = np.linspace(0., 10., 200)
+c_ini = [pi, pi/2, 0., 0.]
+t = np.linspace(0., 20., 200)
 
 sol = odeint(f, c_ini, t)
 
@@ -44,9 +45,9 @@ ax1.set_xlim(-2,2)
 ax1.set_ylim(-2,2)
 def animate(i):
     xas = la*sin(sol[i,0])
-    yas = la*cos(sol[i,0])
+    yas = -la*cos(sol[i,0])
     xbs = lb*sin(sol[i,1]) + xas
-    ybs = lb*cos(sol[i,1]) + yas
+    ybs = -lb*cos(sol[i,1]) + yas
     thisx = [0, xas, xbs]
     thisy = [0, yas, ybs]
     theta = np.linspace(0, 2*pi, 361)
@@ -71,5 +72,9 @@ def animate(i):
 #for i in range(0,len(xa)):
 #	plt.plot([xa[i], xb[i]],[ya[i], yb[i]], 'b-')
 ani = animation.FuncAnimation(fig,animate,np.arange(1,len(sol)),interval=50)
-ani.save('sim2.mp4')
 plt.show()
+
+resp = input("Guardar [S/N]")
+if resp == "S":
+    name = input("Nombre del archivo")
+    ani.save('{}.mp4'.format(name))
