@@ -9,13 +9,13 @@ from numpy import sin, cos, pi
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
 
-la = .8
-lb = .5
+la = .77
+lb = .87
 I = 5.0
 m = .61
 mp = 30.
 g = 9.8
-h0 = 3.0
+h0 = 2.0
 
 def f(x, t):
     alpha, beta, alphap, betap = x #alpha p = alpha punto

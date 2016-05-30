@@ -317,13 +317,13 @@ On obtient dés résultats intéressants:
  \centering
  \begin{subfigure}{0.4\textwidth}
   \includegraphics[width=\textwidth]{fig.png}
-  \caption{Chute de la particule entre 0.0 et 2.0s}
+  \caption{Chute de la particule entre 0.0s et 2.0s}
  \end{subfigure}
  \begin{subfigure}{0.4\textwidth}
   \includegraphics[width=\textwidth]{fig2.png}
   \caption{Chute de la particule entre 2.0s et 4.0s}
  \end{subfigure}
-
+\caption{Simulation de la chute de la particule entre 0.0s et 4.0s}
 \end{figure}
 
 \pagebreak
@@ -430,9 +430,17 @@ Donc, on n'a qu'a changer la valeur de $A$, de $E$ et du déterminant.
  \includegraphics[width=\textwidth]{figure_4.png}
  \caption{Simulation pour $\ell_A > \ell_B$}
 \end{subfigure}
+\caption{Simulation pour différentes valeurs de $\ell_A$}
+\end{figure}
+En utilisant l'expression de la vitesse du projectile en $(1)$ et $(2)$, on détermine la vitesse à chaque instant et on obtient,
+
+\begin{figure}[h]
+\centering
+  \includegraphics[width=0.7\textwidth]{figure_5.png}
+  \caption{Vitesse pour $\ell_A \approx \ell_B$ et $\ell_A > \ell_B$, respectivement}
 
 
- 
+
 \end{figure}
 
 \end{document}
