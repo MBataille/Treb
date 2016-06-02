@@ -8,6 +8,7 @@
  \lstset{language=Python}    
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\figurename}{Fig.}
  \renewcommand{\qedsymbol}{}
  \renewcommand{\delta}{\partial}
 \newenvironment{problem}[2][Partie]{\begin{trivlist}
@@ -316,11 +317,11 @@ On obtient dés résultats intéressants:
 \begin{figure}[h]
  \centering
  \begin{subfigure}{0.4\textwidth}
-  \includegraphics[width=\textwidth]{fig.png}
+  \includegraphics[width=\textwidth]{../fig/fig.png}
   \caption{Chute de la particule entre 0.0s et 2.0s}
  \end{subfigure}
  \begin{subfigure}{0.4\textwidth}
-  \includegraphics[width=\textwidth]{fig2.png}
+  \includegraphics[width=\textwidth]{../fig/fig2.png}
   \caption{Chute de la particule entre 2.0s et 4.0s}
  \end{subfigure}
 \caption{Simulation de la chute de la particule entre 0.0s et 4.0s}
@@ -337,7 +338,7 @@ qui attache le disque au contrepoids (et passe par une poulie) a une longueur $\
 \begin{tikzpicture}
  \draw (0,0) circle (2);
  \draw (45:2) -- (45:3.5);
- \draw (52:2.75) node {$\ell$};
+ \draw (52:2.75) node {$\ell_P$};
  \draw (58:1.3) node {$\ell_A$};
  \draw[dotted] (0:0) -- (45:2);
  \draw (45:4) circle (0.5);
