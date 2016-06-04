@@ -14,7 +14,7 @@ import matplotlib.animation as animation
 
 la = .77
 lb = .87
-I = .50
+I = .05
 m = .61
 mp = 30.
 g = 9.8
@@ -28,28 +28,29 @@ def traj(sol, xp, yp, index_exit):
     print(t_max)
     t = np.linspace(0,t_max, (len(sol)-index_exit))
     x = x0+xp[index_exit]*t
-    y = y0 + yp[index_exit]*t - 0.5*g*t*t   
+    y = y0 + yp[index_exit]*t - 0.5*g*t*t  
+    print(x[-1])
     return x,y
     
-def traject(sol, xp, yp, time, index_exit):
-    c_throw = sol[index_exit]
-    x0 = lb*sin(c_throw[1]) + la*sin(c_throw[0])
-    y0 = -lb*cos(c_throw[1]) - la*cos(c_throw[0])
-    xs = []
-    ys = []
-    xlast = -1
-    for i,t in enumerate(time):
-        x = xp[i]*t + x0
-        y = -0.5*g*t*t + yp[i]*t + y0   
-        if y < 0:
-            if xlast == -1:
-                xlast = xs[-1]
-            xs.append(xlast)
-            ys.append(0)
-        else:
-            xs.append(x)
-            ys.append(y)
-    return xs, ys
+#def traject(sol, xp, yp, time, index_exit):
+#    c_throw = sol[index_exit]
+#    x0 = lb*sin(c_throw[1]) + la*sin(c_throw[0])
+#    y0 = -lb*cos(c_throw[1]) - la*cos(c_throw[0])
+#    xs = []
+#    ys = []
+#    xlast = -1
+#    for i,t in enumerate(time):
+#        x = xp[i]*t + x0
+#        y = -0.5*g*t*t + yp[i]*t + y0   
+#        if y < 0:
+#            if xlast == -1:
+#                xlast = xs[-1]
+#            xs.append(xlast)
+#            ys.append(0)
+#        else:
+#            xs.append(x)
+#            ys.append(y)
+#    return xs, ys
 def abs(ar):
     x = []
     for a in ar:
