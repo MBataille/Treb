@@ -19,7 +19,14 @@
 \author{R. Seguel, J.P. Soto, P. Cuello et M. Bataille}
 \date{Avril, Mai et Juin 2016}
 \maketitle
- \section{Réunion 1. 27/04}
+
+\tableofcontents
+
+\pagebreak
+
+\section{Construction du trébuchet}
+
+\subsection{Réunion 1. 27/04}
 
 
 {\bf Équations.}
@@ -60,7 +67,7 @@ Problème: Mr. Lance nous a dit qu'il faut réguler la
 \end{enumerate}
 
 \vspace{1cm}
-\section{Réunion 2. 28/04}
+\subsection{Réunion 2. 28/04}
 
 {\bf Plans}
 On a calculé la plupart des mesures pour un raccourcissement de 67\% comme Mr Lance nous le a indiqué.
@@ -76,14 +83,19 @@ du lancer est de $60$\textdegree. D'où le taux de raccourcissement serait
 de 80\%.
 
 \vspace{1cm}
-\section{Vacances.}
+
+\pagebreak
+
+\subsection{Vacances.}
 
 Finalement, on a décidé de faire un raccourcissement de 80\% puisqu'il faudra raccourcir le bras et la corde de quelques centimètres du au poids du projectile. Les mesures calculées sont affichées sur la figure ci-dessous. 
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\textwidth]{medidas2.png}
+\includegraphics[width=0.5\textwidth]{medidas2.png}
 \end{figure}
+
+\pagebreak
 
 \section{Travail sur la simulation.}
 Pour pouvoir étudier plus facilement les mécaniques du trébuchet, on commencera par diviser le problème en plusieurs parties, plus simples.
@@ -181,10 +193,11 @@ Pour les conditions initiales on a $\theta_0 = \frac{\pi}{2}$ d'où,
 
 Mais, si $\dot{\theta}_0 = 0$,  alors la vitesse angulaire ne changera pas (car $\ddot{\theta}_0 = 0$)et donc, la particule $B$ ne se déplacera pas par rapport à la particule $A$. On doit donc changer la configuration initiale, soit $\theta_0 \neq \frac{\pi}{2}$ (d'où $\ddot{\theta}_0 \neq 0$), soit $\dot{\theta}_0 \neq 0$ .
 
-\subsection{Un disque, une particule et une corde}
+\subsection{Particule attachée à un disque}
 
 
-Maintenant, on étudiera le mouvement d'une particule lorsqu'elle est attachée à un disque par une corde. La situation est celle de la figure ci-dessous. Pour conditions initiales, on prendra $\alpha = \beta = \frac12\pi$.
+Maintenant, on étudiera le mouvement d'une particule lorsqu'elle est attachée à un disque par une corde. La situation est celle de la figure ci-dessous. Pour conditions initiales, on prendra $\alpha = \frac12\pi$ et $\beta = \frac12\pi$.
+Pour les valeurs de $\ell_A$ et $\ell_B$ on prendra celles de la catapulte qu'on a construit.
 \begin{center}
 
 
@@ -328,6 +341,57 @@ On obtient dés résultats intéressants:
 \end{figure}
 
 \pagebreak
+\subsection{Détermination du moment d'inertie}
+
+Un premier problème apparaît dans cette simulaiton, la valeur du moment d'inertie $I$. Dans notre catapulte, on a un objet
+de forme irregulière qui tourne dans un axe, il est donc important de déterminer le moment d'inertie de cet objet afin d'obtenir
+une simulation plus précise. Dans cette section on abordera donc deux méthodes pour déterminer ou calculer le moment d'inertie
+de cet objet.
+
+\subsubsection{Méthode calculatoire}
+---
+
+\subsubsection{Détermination par la simulation}
+
+On peut également déterminer le moment d'inertie en utilisant nos calculs précédents dans le système de la particule attachée
+au disque, sans contrepoids. Prennons $\ell_B = 0$, dans ce cas, l'équation $(4)$ disparait et l'équation $(3)$ devient,
+$$
+\left(\frac{I}{m_B}+\ell_A^2\right)\ddot{\alpha}+g\ell_A\sin{\alpha} = 0
+$$
+
+Or, pour des petites valeurs de $\alpha$, $\sin{\alpha} \approx \alpha$.
+D'où,
+
+$$
+\ddot{\alpha} = -\frac{g\ell_A}{\frac{I}{m_B}+\ell_A^2}\alpha
+$$
+
+On a donc une équation du type
+
+$$
+\ddot{\alpha} = -K^2\alpha
+$$
+
+où $$K = \sqrt{\frac{g\ell_A}{\frac{I}{m_B}+\ell_A^2}}$$
+
+D'où on déduit l'expression de $\alpha$,
+
+$$
+\alpha(t) = a\cos{(Kt)}+b\sin{(Kt)} 
+$$
+
+Où $a$ et $b$ sont deux réels qu'on détermine par les conditions initiales.
+
+D'après cette expression, on peut déterminer la période d'oscillation,
+
+\begin{align*}
+T &= \frac{2\pi}{K} \\
+T^2 &= \frac{4\pi^2\left(\frac{I}{m_B}+\ell_A^2\right)}{g\ell_A} \\
+T^2g\ell_A &= 4\pi^2\left(\frac{I}{m_B}+\ell_A^2\right) \\
+m_B\left(\frac{T^2g\ell_A}{4\pi^2}-\ell_A^2\right) &= I
+\end{align*}
+
+\pagebreak
 
 \subsection{Disque attaché au contrepoids}
 
@@ -377,8 +441,8 @@ D'où
 $$ \dot{y} = \ell_A\dot{\alpha}$$
 
 Comme cette situation est superposé à la situation étudiée précedemment, l'énergie cinétique, potentielle et le lagrangien seront
-ressemblables. On définit donc $T'$ tel que l'énergie cinétique du système $T = T_0 + T'$ où $T_0$ est l'énergie cinétique
-dans la situation précedante et $T'$ est l'énergie cinétique issue de $P$. De même pour $V'$ et $L'$.
+ressemblables. On a donc l'énergie cinétique de ce système, $T = T_0 + T'$, $T_0$ étant l'énergie cinétique dans le système étudié
+précedemment et $T'$, ce que l'on additionne à $T_0$ pour retrouver l'énergie cinétique du système.
 
 On a:
 
@@ -423,22 +487,29 @@ Donc, on n'a qu'a changer la valeur de $A$, de $E$ et du déterminant.
 
 \begin{figure}[h]
 \centering
-\begin{subfigure}{0.4\textwidth}
- \includegraphics[width=\textwidth]{figure_3.png}
- \caption{Simulation pour $\ell_A \approx \ell_B$}
-\end{subfigure}
-\begin{subfigure}{0.4\textwidth}
- \includegraphics[width=\textwidth]{figure_4.png}
- \caption{Simulation pour $\ell_A > \ell_B$}
-\end{subfigure}
-\caption{Simulation pour différentes valeurs de $\ell_A$}
+ \includegraphics[width=0.5\textwidth]{../fig/fig3.png}
+\caption{Chute de la particule avec contrepoids}
 \end{figure}
 En utilisant l'expression de la vitesse du projectile en $(1)$ et $(2)$, on détermine la vitesse à chaque instant et on obtient,
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
-  \includegraphics[width=0.7\textwidth]{figure_5.png}
-  \caption{Vitesse pour $\ell_A \approx \ell_B$ et $\ell_A > \ell_B$, respectivement}
+  \includegraphics[width=0.5\textwidth]{../fig/fig4.png}
+  \caption{Vitesse tangentielle de la particule en fonction du temps}
 \end{figure}
 
+\pagebreak
+
+
+Finalement, on n'a qu'a déterminer expérimentalement la période d'oscillation de notre objet irrégulier ayant attaché le projectile avec un angle
+initial petit ($\leq 25$°).
+\subsection{Lacher le projectile}
+
+On a arrivé à simuler correctement le mouvement du projectile lorsqu'il est attaché au disque mais on a encore à determiner
+le moment idéal pour lacher le projectile. On pourrait d'abord penser qu'il faut le lacher à un angle de $45$° par rapport à
+l'horizontale. Or, dans cette catapulte, l'angle et la vitesse tangentielle du projectile sont liés.
+On pourrait donc lacher le projectile à un angle de $45$° mais sa vitesse peut ne pas être maximale. Également, la vitesse
+peut être maximale lorsque le projectile est dirigé vers le sol. Il faut donc trouver un équilibre entre la vitesse et l'angle
+pour trouver ce moment idéal. Une fois qu'on connaît cet instant, on peut connaître l'angle initial et la vitesse initiale
+du projectile et ainsi retrouver sa trajectoire. 
 \end{document}

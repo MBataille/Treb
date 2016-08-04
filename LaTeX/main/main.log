@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.12)  1 JUN 2016 20:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.12)  21 JUL 2016 17:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1006,88 +1006,87 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 21.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+) (./main.toc)
+\tf@toc=\write4
+\openout4 = `main.toc'.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<medidas2.png, id=18, 644.4075pt x 508.90125pt>
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+<medidas2.png, id=21, 644.4075pt x 508.90125pt>
 File: medidas2.png Graphic file (type png)
  <use medidas2.png>
-Package pdftex.def Info: medidas2.png used on input line 85.
-(pdftex.def)             Requested size: 328.82707pt x 259.69151pt.
- [2 <./medidas2.png>] [3] [4] [5]
-Overfull \hbox (2.41136pt too wide) in paragraph at lines 311--313
+Package pdftex.def Info: medidas2.png used on input line 95.
+(pdftex.def)             Requested size: 234.8775pt x 185.48727pt.
+ [3 <./medidas2.png>] [4] [5] [6]
+Overfull \hbox (2.41136pt too wide) in paragraph at lines 324--326
 [][]\OT1/cmr/m/n/10 A par-tir de cette ^^Sequation, on peut impl^^Sementer faci
 le-ment un al-go-rithme pour la r^^Sesoudre num^^Seriquement.
  []
 
-<../fig/fig.png, id=40, 274.02374pt x 256.96pt>
+<../fig/fig.png, id=42, 274.02374pt x 256.96pt>
 File: ../fig/fig.png Graphic file (type png)
  <use ../fig/fig.png>
-Package pdftex.def Info: ../fig/fig.png used on input line 320.
+Package pdftex.def Info: ../fig/fig.png used on input line 333.
 (pdftex.def)             Requested size: 187.89914pt x 176.2008pt.
 
-<../fig/fig2.png, id=41, 274.02374pt x 256.96pt>
+<../fig/fig2.png, id=43, 274.02374pt x 256.96pt>
 File: ../fig/fig2.png Graphic file (type png)
  <use ../fig/fig2.png>
-Package pdftex.def Info: ../fig/fig2.png used on input line 324.
+Package pdftex.def Info: ../fig/fig2.png used on input line 337.
 (pdftex.def)             Requested size: 187.89914pt x 176.2008pt.
- [6 <../fig/fig.png> <../fig/fig2.png>] [7] <figure_3.png, id=53, 578.16pt x 43
-3.62pt>
-File: figure_3.png Graphic file (type png)
-
-<use figure_3.png>
-Package pdftex.def Info: figure_3.png used on input line 427.
-(pdftex.def)             Requested size: 187.89914pt x 140.92482pt.
- <figure_4.png, id=54, 578.16pt x 433.62pt>
-File: figure_4.png Graphic file (type png)
-
-<use figure_4.png>
-Package pdftex.def Info: figure_4.png used on input line 431.
-(pdftex.def)             Requested size: 187.89914pt x 140.92482pt.
- <figure_5.png, id=55, 578.16pt x 433.62pt>
-File: figure_5.png Graphic file (type png)
-
-<use figure_5.png>
-Package pdftex.def Info: figure_5.png used on input line 440.
-(pdftex.def)             Requested size: 328.82707pt x 246.61679pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8 <./figure_3.png> <./figure_4.png>] [9 <./figure_5.png>] (./main.aux) ) 
+[7] [8 <../fig/fig.png> <../fig/fig2.png>] [9] [10]
+<../fig/fig3.png, id=62, 578.16pt x 433.62pt>
+File: ../fig/fig3.png Graphic file (type png)
+ <use ../fig/fig3.png>
+Package pdftex.def Info: ../fig/fig3.png used on input line 490.
+(pdftex.def)             Requested size: 234.8775pt x 176.15768pt.
+
+<../fig/fig4.png, id=63, 578.16pt x 433.62pt>
+File: ../fig/fig4.png Graphic file (type png)
+ <use ../fig/fig4.png>
+Package pdftex.def Info: ../fig/fig4.png used on input line 497.
+(pdftex.def)             Requested size: 234.8775pt x 176.15768pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[11 <../fig/fig3.png>] [12 <../fig/fig4.png>] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 14697 strings out of 495028
- 257485 string characters out of 6181497
- 330932 words of memory out of 5000000
- 17604 multiletter control sequences out of 15000+600000
- 13383 words of font info for 52 fonts, out of 8000000 for 9000
+ 14687 strings out of 495028
+ 257365 string characters out of 6181497
+ 331932 words of memory out of 5000000
+ 17595 multiletter control sequences out of 15000+600000
+ 12137 words of font info for 47 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  56i,15n,55p,485b,593s stack positions out of 5000i,500n,10000p,200000b,80000s
- </hom
-e/martin/.texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.p
-fb>
-Output written on main.pdf (9 pages, 446904 bytes).
+ </home/martin/.tex
+mf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy8.pfb>
+Output written on main.pdf (12 pages, 377795 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
+ 130 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
