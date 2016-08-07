@@ -68,6 +68,14 @@ def f(x, t, args):
     dxdt = [alphap, betap, (D*E-B*F)*det, (-C*E + A*F)*det]
     return dxdt
 
+def f2(x, t, args):
+    """Resuelve ecuacion diferencial para el momento de inercia"""
+    la, lb, I, m, mp, g, h0 = args
+    alpha, alphap = x
+    alphapp = (-g*la*sin(alpha))/((I/m)+la*la)
+    dxdt = [alphap,alphapp]
+    return dxdt
+
 def anim(i, args):
     """Plot dinamico del proyectil en el tiempo"""
     ax1, sol, index_exit, xpr, ypr, la, lb, I, m, mp, g, h0, frames = args
@@ -121,7 +129,7 @@ def solution(conf_ini = None, time = None, params = None):
     else:
         t = time
         frames = len(time)
-
+        
     if params is None:
         args = (.77, .87, .05, .04, 10., 9.8, 2.0)
                 #  la,  lb,  I,   m,  mp,   g,   h0
@@ -130,6 +138,23 @@ def solution(conf_ini = None, time = None, params = None):
     sol = odeint(f, c_ini, t, (args,)) # Resuelve la ecuacion dif
     return sol, args
     
+def inertiaSol(inertia, conf_ini = None, time = None ):
+    """Resuelve ec dif para el momento de inercia con parametros dados"""
+    if conf_ini is None:
+        c_ini = [pi/2, 0.]
+    else:
+        c_ini = conf_ini
+
+    if time is None:
+        frames = 1001
+        t = np.linspace(0., 20., frames) 
+    else:
+        t = time
+        frames = len(time)   
+    args1 = (.77, .0, inertia)
+    args2 = (.04, 10., 9.8, 2.0) 
+    sol = odeint(f2, c_ini, t, (args1+args2,)) # Resuelve la ecuacion dif
+    return sol
 def createAnimation(filename = None):
     """ Produce una animacion en mp4"""
     sol, params = solution() 
