@@ -131,7 +131,7 @@ def solution(conf_ini = None, time = None, params = None):
         frames = len(time)
         
     if params is None:
-        args = (.77, .87, .05, .04, 10., 9.8, 2.0)
+        args = (.77, .87, .05, .65, 10., 9.8, 2.0)
                 #  la,  lb,  I,   m,  mp,   g,   h0
     else:
         args = params + (9.8, 2.0) # params + g,h0
@@ -152,7 +152,7 @@ def inertiaSol(inertia, conf_ini = None, time = None ):
         t = time
         frames = len(time)   
     args1 = (.77, .0, inertia)
-    args2 = (.04, 10., 9.8, 2.0) 
+    args2 = (.65, 10., 9.8, 2.0) 
     sol = odeint(f2, c_ini, t, (args1+args2,)) # Resuelve la ecuacion dif
     return sol
 def createAnimation(filename = None):
