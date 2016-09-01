@@ -10,5 +10,6 @@
 \contentsline {subsubsection}{\numberline {2.3.2}D\IeC {\'e}termination par la simulation}{8}
 \contentsline {paragraph}{Solution analytique approxim\IeC {\'e}e}{8}
 \contentsline {paragraph}{Solution num\IeC {\'e}rique}{9}
+\contentsline {paragraph}{D\IeC {\'e}termination de la p\IeC {\'e}riode}{10}
 \contentsline {subsection}{\numberline {2.4}Disque attach\IeC {\'e} au contrepoids}{11}
 \contentsline {subsection}{\numberline {2.5}Lacher le projectile}{13}

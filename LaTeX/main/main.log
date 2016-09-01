@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.12)  17 AUG 2016 17:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.12)  31 AUG 2016 14:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1059,28 +1059,41 @@ File: ../fig/T_I.png Graphic file (type png)
  <use ../fig/T_I.png>
 Package pdftex.def Info: ../fig/T_I.png used on input line 445.
 (pdftex.def)             Requested size: 469.75502pt x 246.14146pt.
- [10 <../fig/T_I.png>] [11] <../fig/fig3.png, id=72, 578.16pt x 433.62pt>
+
+<../fig/T2.png, id=65, 1386.1386pt x 734.9859pt>
+File: ../fig/T2.png Graphic file (type png)
+ <use ../fig/T2.png>
+Package pdftex.def Info: ../fig/T2.png used on input line 463.
+(pdftex.def)             Requested size: 469.75502pt x 249.08441pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10 <../fig/T_I.png>] [11 <../fig/T2.png>]
+<../fig/fig3.png, id=74, 578.16pt x 433.62pt>
 File: ../fig/fig3.png Graphic file (type png)
-
-<use ../fig/fig3.png>
-Package pdftex.def Info: ../fig/fig3.png used on input line 546.
+ <use ../fig/fig3.png>
+Package pdftex.def Info: ../fig/fig3.png used on input line 564.
 (pdftex.def)             Requested size: 234.8775pt x 176.15768pt.
- <../fig/fig4.png, id=73, 578.16pt x 433.62pt>
-File: ../fig/fig4.png Graphic file (type png)
 
-<use ../fig/fig4.png>
-Package pdftex.def Info: ../fig/fig4.png used on input line 553.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../fig/fig4.png, id=75, 578.16pt x 433.62pt>
+File: ../fig/fig4.png Graphic file (type png)
+ <use ../fig/fig4.png>
+Package pdftex.def Info: ../fig/fig4.png used on input line 571.
 (pdftex.def)             Requested size: 234.8775pt x 176.15768pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[12 <../fig/fig3.png>] [13 <../fig/fig4.png>] (./main.aux) ) 
+[12] [13 <../fig/fig3.png> <../fig/fig4.png>] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 14704 strings out of 495028
- 257655 string characters out of 6181497
+ 14709 strings out of 495028
+ 257732 string characters out of 6181497
  331932 words of memory out of 5000000
- 17609 multiletter control sequences out of 15000+600000
+ 17613 multiletter control sequences out of 15000+600000
  12137 words of font info for 47 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  56i,15n,55p,485b,593s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1103,10 +1116,10 @@ c/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.p
 fb>
-Output written on main.pdf (13 pages, 504079 bytes).
+Output written on main.pdf (13 pages, 568031 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
+ 146 PDF objects out of 1000 (max. 8388607)
  93 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
 

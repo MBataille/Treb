@@ -12,3 +12,18 @@ total / densidad = 4.207e-3
 densidad = 594 (kg/m3)
 
 total : 2.4987
+
+total * espesor = 0,00599
+
+dens pino oregon = 530kg/m3 (inti.gob.ar)
+largo = 0.0508
+ancho = 0.0254
+dens linear = 0.684
+
+momento de inercia barra: I = dens_linear * largo^3 /3
+barra1 : largo : 0.632
+barra2 :         0.229
+barra3 :         0.343
+barra4 :         0.414
+barra5 :         0.307
+total + 2barras = 0.04399

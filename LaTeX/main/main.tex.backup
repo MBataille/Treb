@@ -403,7 +403,7 @@ m_B\left(\frac{T^2g\ell_A}{4\pi^2}-\ell_A^2\right) &= I
 
 \paragraph{Solution numérique}
 
-On doit donc créer un fonction telle que,
+Pour résoudre l'équation $(6)$ on doit créer un fonction telle que,
 $$ f(x) = \frac{dx}{dt} $$
 
 Où, $$x = \begin{pmatrix}
@@ -418,8 +418,53 @@ $$ f(x) = \begin{pmatrix}
           \end{pmatrix}
 $$
 
+En utilisant un algorithme pour résoudre cette équation, on obtient les valeurs de $\alpha$ et $\dot{\alpha}$ pour chaque instant,
+
+\begin{figure}[h]
+ \centering
+ \begin{subfigure}{0.4\textwidth}
+  \includegraphics[width=\textwidth]{../fig/alpha1.png}
+%   \caption{Valeurs de $\alpha$ pour $I = 0.25$}
+ \end{subfigure}
+ \begin{subfigure}{0.4\textwidth}
+  \includegraphics[width=\textwidth]{../fig/alpha2.png}
+
+%   \caption{Valeurs de $\alpha$ pour $I = 0.1$}
+ \end{subfigure}
+ \caption{Valeurs de $\alpha$ en fonction du temps pour des moments d'inertie différents}
+
+\end{figure}
+ \pagebreak
+ On détermine la période d'oscillation $T$ de l'objet en prennant le valeurs de $\alpha$ dans le temps et en cherchant deux maxima consécutifs.
+ Ainsi, la période $T$ correspond à la différence entres les instants pour chaque maxima.
+
+ On fait varier le moment d'inertie dans un intervalle arbitraire afin de tracer un graphique de la période en fonction du moment d'inertie,
+ 
+ \begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{../fig/T_I.png}
+  \caption{Période en fonction du moment d'inertie pour différents valeurs de $\alpha_0$}
+ \end{figure}
 
 
+ \paragraph{Détermination de la période}
+ 
+ On a placé un axe sur deux supports et on a fait osciller l'objet autour de cet axe avec un angle initial petit, $\alpha \approx 20$°. On a
+ filmé cette expérience pour ensuite reproduire la vidéo image par image et ainsi mesurer la période d'oscillation. On fait osciller l'objet
+ une vintaine de fois et on obtient
+ 
+ {\bf Table de valeurs}.
+ 
+ On applique la loi de Student...
+ 
+ Enfin, on obtient une valeur de $T = 1.91 \pm 0.02$s. D'après le graphique ci-dessous, le moment d'inertie de l'objet se trouve autour 
+ \begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{../fig/T2.png}
+  \caption{Graphique de la période en fonction du moment d'inertie}
+ \end{figure}
+
+ 
 \pagebreak
 
 \subsection{Disque attaché au contrepoids}
